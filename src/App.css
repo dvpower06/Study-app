@@ -7,7 +7,6 @@
     --muted: #9ea8bc;
     --accent: #7c93ff;
     --accent-2: #4dd4c4;
-    --danger: #ff6b7a;
     --border: rgba(255, 255, 255, 0.16);
 }
 
@@ -20,10 +19,7 @@ body {
     min-height: 100vh;
     font-family: Inter, "Segoe UI", Roboto, sans-serif;
     color: var(--text);
-    background:
-        radial-gradient(circle at top left, rgba(124, 147, 255, 0.35), transparent 28%),
-        radial-gradient(circle at bottom right, rgba(77, 212, 196, 0.25), transparent 24%),
-        var(--bg);
+    background: radial-gradient(circle at top left, rgba(124, 147, 255, 0.35), transparent 28%), radial-gradient(circle at bottom right, rgba(77, 212, 196, 0.25), transparent 24%), var(--bg);
 }
 
 #root {
@@ -98,10 +94,6 @@ button {
     transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
-button:hover {
-    transform: translateY(-1px);
-}
-
 .start {
     background: linear-gradient(135deg, var(--accent), var(--accent-2));
     color: white;
@@ -172,10 +164,5 @@ button:hover {
 
     .app-container {
         grid-template-columns: 1fr;
-    }
-
-    .pomodoro,
-    .tasks {
-        padding: 20px;
     }
 }

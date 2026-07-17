@@ -4,8 +4,21 @@ import './App.css'
 function Pomodoro() {
   const [timeLeft, settimeLeft] = useState(1500);
   const intervalRef = useRef(null);
+  const [buttonText, changeText] = useState('Start');
+  const [isTimerRunning, setIsTimerRunning] = useState(false);
+
+
+  function resetTimer() {
+    settimeLeft(1500);
+    changeText('START');
+
+  }
+
+
 
   function startTimer() {
+    setIsTimerRunning(true);
+
     intervalRef.current = setInterval(() => {
       settimeLeft((prevTimeLeft) => {
         if (prevTimeLeft <= 0) {
@@ -20,7 +33,9 @@ function Pomodoro() {
   }
 
   function stopTimer() {
-    clearInterval(intervalRef.current)
+    setIsTimerRunning(false);
+    clearInterval(intervalRef.current);
+    changeText('CONTINUE');
   }
 
   return (
@@ -31,8 +46,13 @@ function Pomodoro() {
         <h2>{String(timeLeft % 60).padStart(2, "0")}</h2>
       </div>
       <div className='buttons'>
-        <button className='start' onClick={startTimer}>START</button>
-        <button className='stop' onClick={stopTimer}>STOP</button>
+        <button className='start' onClick={startTimer}>{buttonText}</button>
+        {isTimerRunning && (
+          <button className='stop' onClick={stopTimer}>STOP</button>
+        )}
+        {!isTimerRunning && (
+          <button className='stop' onClick={resetTimer}>RESET</button>
+        )}
       </div>
 
     </>

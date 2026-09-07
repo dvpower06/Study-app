@@ -4,6 +4,9 @@ A clean, minimalist desktop study companion designed to boost productivity by pa
 
 Built with **React** + **Vite** and packaged as a native desktop application with **Electron**. (CSS made with AI)
 
+
+![alt text](image.png)
+
 ---
 
 ##  Features
@@ -23,7 +26,7 @@ Built with **React** + **Vite** and packaged as a native desktop application wit
 
 ---
 
-## 🛠️ Tech Stack
+##  Tech Stack
 
 - **Frontend**: [React 19](https://react.dev/)
 - **Bundler & Build Tool**: [Vite](https://vite.dev/)
@@ -48,5 +51,3 @@ Built with **React** + **Vite** and packaged as a native desktop application wit
 └── vite.config.js         # Vite configuration (base relative paths)
 ```
 
-## Screenshot
-![alt text](image.png)

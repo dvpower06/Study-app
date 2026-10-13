@@ -14,8 +14,6 @@ function Pomodoro() {
 
   }
 
-
-
   function startTimer() {
     setIsTimerRunning(true);
 
